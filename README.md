@@ -31,3 +31,8 @@ Run DHCP server configuration script (the arguments are: net-address, mask-addre
   sudo ./configurar_dhcp.sh 192.168.1.0 255.255.255.0 192.168.1.10 192.168.1.100 192.168.1.1 8.8.8.8 8.8.4.4
 ```
 
+Run Web server configuration script (using nginx)
+
+```bash
+  sudo ./configurar_web_nginx.sh
+```
