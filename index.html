@@ -71,22 +71,73 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             background: #e8eaf6;
         }
+
+        .server-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            margin: 2rem 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .server-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                120deg,
+                transparent,
+                rgba(255, 255, 255, 0.3),
+                transparent
+            );
+            transition: all 0.5s ease;
+        }
+
+        .server-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .server-button:hover::before {
+            left: 100%;
+        }
+
+        .server-button:active {
+            transform: translateY(1px);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Servidor web grupo 3</h1>
-        
         <h2 class="welcome-message">Bienvenidos al servidor web del grupo 3</h2>
-        
         <h2>Integrantes</h2>
-        
         <ul class="integrantes-list">
             <li class="integrante-item">Samuel David Vargas Millan</li>
             <li class="integrante-item">Sebastian Daza Delgadillo</li>
             <li class="integrante-item">Cristian Jesus Celis Gutierrez</li>
             <li class="integrante-item">Harold Ricardo Alvarado Leandro</li>
         </ul>
+        
+        <div style="text-align: center;">
+            <button class="server-button" onclick="window.location.href='http://grupotres.com/descargas'">
+                Ver archivos del servidor
+            </button>
+        </div>
     </div>
 </body>
 </html>
